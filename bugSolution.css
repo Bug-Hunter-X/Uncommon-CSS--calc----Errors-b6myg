@@ -1,0 +1,15 @@
+/* Corrected CSS with proper unit handling, operator precedence and parentheses */
+
+.element {
+  width: calc(100% - 20px); /* Correct: subtracts 20 pixels from 100% width */
+  height: calc(50% + 10px); /* Correct: adds 10 pixels to 50% height */
+  margin: calc((100vw - 800px) / 2); /* Correct: parenthesis ensure correct division */
+  padding: calc(1em * 2);  /* Correct unit usage */
+}
+
+/* Example of an incorrect use of calc: */
+/*.element {
+  width: calc(100% - 20); /* Incorrect: unit missing in 20*/
+  height: calc(50% + 10px + 2em); /* Incorrect: mixes units without proper conversion*/
+  margin: 100vw - 800px / 2; /* Incorrect: division order is wrong*/
+}*/
